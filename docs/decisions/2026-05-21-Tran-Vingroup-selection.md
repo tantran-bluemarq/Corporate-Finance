@@ -1,4 +1,10 @@
 ---
+template: memo
+purpose: "Executive memo for stage 2 deliverable"
+audience: managing director
+courses: [BUS-629]
+---
+
 # Company Selection Memo: Vingroup JSC (VIC, HOSE)
 
 **To:** Managing Director
