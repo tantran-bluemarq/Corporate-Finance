@@ -1,0 +1,66 @@
+# Company Selection Memo: Vingroup JSC (VIC, HOSE)
+
+**To:** Managing Director
+**From:** Tan Tran
+**Date:** 2025-05-21
+**Re:** Stage 2 Company Selection — Vingroup JSC (VIC, HOSE) for Financial Analysis, FY2025
+
+---
+
+## Executive Summary
+
+I select Vingroup JSC (VIC, HOSE) as the subject for this semester's financial analysis. Vingroup is Vietnam's largest conglomerate by market capitalization, operating across real estate, hospitality, industrials, healthcare, and infrastructure. Its stock price movements have materially driven VN-Index volatility even as most other constituents remained flat — making it a systemically important firm worth rigorous analysis. The core question: can Vingroup sustain its balance sheet while absorbing continued losses from VinFast, its EV subsidiary? I hypothesize elevated leverage driven by VinFast exposure and aim to quantify the potential systemic risk to Vietnam's capital markets if VinFast's losses remain unresolved.
+
+---
+
+## Background
+
+In FY2025, Vingroup recorded net revenue of VND 331,838 billion (+76% YoY) and adjusted revenue of VND 339,596 billion (+60% YoY), with profit after tax of VND 11,065 billion (+110% YoY). Growth was primarily driven by simultaneous launches of large-scale real estate projects nationwide and a near-doubling of VinFast domestic deliveries to 196,900 electric vehicles. Despite this revenue momentum, VinFast continues to post deep losses — approximately USD 3.2 billion in FY2024 — while Vingroup has committed up to VND 35 trillion in new loans to VinFast through 2026, with over VND 30 trillion already disbursed as of May 2025.
+
+---
+
+## Method
+
+The analysis covers FY2024 and FY2025 using Vingroup's audited consolidated financial statements. I will compute:
+
+- **Profitability:** ROE, ROA, net profit margin, EBITDA margin
+- **Leverage:** Debt-to-equity ratio, interest coverage ratio, net debt/EBITDA
+- **Liquidity:** Current ratio, quick ratio
+- **Stress test:** A scenario analysis estimating balance sheet impact if VinFast's USD 2.54 billion guaranteed debt were fully absorbed by the parent
+
+**Data sources:** Vingroup Annual Report 2025 (audited), HOSE filings, Vingroup IR page, Vietstock, Bloomberg, VinFast Nasdaq disclosures.
+
+---
+
+## Findings
+
+Preliminary findings from the FY2025 Annual Report and prior disclosures:
+
+- Revenue growth of 76% YoY is strong but heavily concentrated in real estate, a cyclical sector sensitive to interest rates and policy changes
+- Profit after tax doubled YoY to VND 11,065 billion, yet net profit margin remains thin (~3.3%), reflecting high financing costs
+- Vingroup's TTM debt-to-equity ratio stands at approximately 201%, confirming the high-leverage hypothesis
+- As of May 2025, Vingroup had disbursed over VND 30 trillion in loans to VinFast and acts as guarantor for USD 2.54 billion of VinFast's external debt
+- VinFast domestic deliveries surged 99% YoY to 175,099 units in 2025, ranking #1 in Vietnam — a positive operational signal, though gross margins remain negative
+
+---
+
+## Implications
+
+Vingroup's revenue recovery is real but fragile. The conglomerate's profitability depends heavily on real estate pre-sales (Vinhomes reported a record unbilled backlog of VND 186,400 billion), which are sensitive to credit availability and buyer confidence. Meanwhile, VinFast's cash burn creates a structural drag: if VinFast cannot reach breakeven by end-2026 as targeted, Vingroup's capacity to service its own debt while backstopping the subsidiary will face increasing stress. Given VIC's outsized weight on the VN-Index, a credit event at the Vingroup level could trigger broad market repricing — a systemic risk worth monitoring for any Vietnam-focused investor or regulator.
+
+---
+
+## Limitations & Next Steps
+
+This memo draws on preliminary figures from the FY2025 Annual Report; full ratio calculations will be completed in Stage 3 using audited balance sheet data. The stress-test scenario requires further review of debt seniority, cross-default clauses, and currency mismatch. VinFast's path to breakeven also depends on global EV demand and policy support, both of which carry significant uncertainty.
+
+---
+
+## References
+
+- Vingroup JSC. *Annual Report 2025*. Vingroup IR. April 2026.
+- VinFast Auto Ltd. *Q4 & FY2024 Financial Results*. Nasdaq / VinFast IR. April 24, 2025.
+- VinFast Auto Ltd. *Q1 2025 Unaudited Financial Results*. PRNewswire. June 9, 2025.
+- "Vingroup's debt-driven empire on shaky global ground." *Asia Times*. August 27, 2025.
+- Investing.com. HM:VIC Financial Summary (TTM). Accessed May 21, 2025.
+- HOSE. VIC Consolidated Financial Statements FY2024–FY2025.
