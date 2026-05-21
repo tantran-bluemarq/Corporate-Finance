@@ -22,7 +22,7 @@ I select Vingroup JSC (VIC, HOSE) as the subject for this semester's financial a
 
 ## Background
 
-In FY2025, Vingroup recorded net revenue of VND 331,838 billion (+76% YoY) and adjusted revenue of VND 339,596 billion (+60% YoY), with profit after tax of VND 11,065 billion (+110% YoY). Growth was primarily driven by simultaneous launches of large-scale real estate projects nationwide and a near-doubling of VinFast domestic deliveries to 196,900 electric vehicles. Despite this revenue momentum, VinFast continues to post deep losses — approximately USD 3.2 billion in FY2024 — while Vingroup has committed up to VND 35 trillion in new loans to VinFast through 2026, with over VND 30 trillion already disbursed as of May 2025.
+In FY2025, Vingroup recorded consol net revenue of VND 331,838 billion (+76% YoY), with profit after tax of VND 11,065 billion (+110% YoY). Growth was primarily driven by simultaneous launches of large-scale real estate projects nationwide and a near-doubling of VinFast domestic deliveries to 175,099 electric vehicles. Despite this revenue momentum, VinFast continues to post deep losses — approximately USD 3.2 billion in FY2024 — while Vingroup has committed up to VND 35 trillion in new loans to VinFast through 2026, with over VND 30 trillion already disbursed as of May 2025.
 
 ---
 
