@@ -50,3 +50,93 @@ Before you begin, ask me any clarifying questions about the data I've already en
 - Also uploaded: completed Excel file for validation
 
 **AI output:** Validated Excel model saved at models/builds/2026-05-22-tran-vingroup-financials.xlsx
+
+## Stage 4 — Technical Specification (Round 1 Draft)
+
+**Date:** 2026-05-22
+**Tool:** Claude (claude.ai)
+
+**Prompt used:**
+I'm drafting a Stage 4 technical specification for my finance course.
+The Stage 4 requirements are at:
+https://raw.githubusercontent.com/adamwstauffer/shidler/main/courses/BUS-629-VEMBA-International-Corporate-Finance/stage4-technical-specification.md
+
+The spec template is at:
+https://raw.githubusercontent.com/adamwstauffer/shidler/main/docs/templates/spec-template.md
+
+Please read both URLs, then using the spec template structure, draft
+a full technical specification for Vingroup Joint Stock Company (VIC,
+HOSE) FY2025 ratio analysis. Populate every section (Part A items
+1–7, Part B items 8–11), use named-range notation throughout, and
+include real numbers from my uploaded Stage 3 workbook.
+
+**Context provided to AI:**
+- Company: Vingroup JSC (VIC, HOSE)
+- Reporting standard: Vietnamese Accounting Standards (VAS)
+- Fiscal year: FY2025 (current) / FY2024 (prior)
+- Currency: VND millions
+- Uploaded: 2026-05-22-tran-vingroup-financials.xlsx (Stage 3 workbook)
+
+**AI output:** Draft spec saved at
+`docs/specs/2026-05-22-tran-vingroup-spec.md` (v1.0)
+
+---
+
+## Stage 4 — HIL Review Note (Round 1 → Round 2)
+
+**Date:** 2026-05-22
+
+**Gap 1 — NOPAT typo in §4 Derived Inputs:**
+After reviewing v1, I verified the NOPAT formula manually:
+`INC_net + (1 − tax_rate) × INC_interest_expense
+= 11,064,814 + 0.80 × 29,159,736 = 34,392,603`.
+The spec stated 34,392,803 — a 200-unit typo. Because NOPAT is the
+anchor value for ROA, ROC, EVA, Operating Profit Margin, and Du Pont
+ROA, any error here propagates to every downstream ratio. I corrected
+the value in v2 and added step-by-step verification arithmetic as a
+footnote in §4.
+
+**Gap 2 — TIE = 0.124× not stated in §5 Leverage table:**
+The v1 spec described TIE generically as "EBIT coverage of interest;
+<1.5× is distress zone" but never stated the actual computed value.
+Calculating it — `INC_ebit / INC_interest_expense = 3,628,893 /
+29,159,736 = 0.124×` — revealed this is the most critical ratio in
+the model: EBIT covers only 12.4% of interest expense. A Stage 5 LLM
+reading v1 would see a generic benchmark with no signal that Vingroup
+is already deep inside distress territory. I revised §5 to state
+TIE = 0.124× explicitly with a critical warning, added validation
+rule V6 requiring Stage 5 to explain how `INC_other_income`
+(VND 51,968,218M) bridges the gap, and made debt servicing the first
+mandatory recommendation in §9.
+
+**Gap 3 — `BAL_receivables_curr` missing as named range in §3:**
+The Quick Ratio formula in §5 references `BAL_receivables_curr`
+directly, but v1's §3 Data Inputs table only listed
+`BAL_receivables_prior` with an explicit named range. The current-year
+value (267,209,963) had no standalone named-range row. A Stage 5 LLM
+scanning §3 would not find `BAL_receivables_curr` and could fail to
+resolve the Quick Ratio formula. I added a dedicated row in §3 with a
+note flagging its direct use in the Quick Ratio.
+
+**Gap 4 — Benchmarks used single-sector real estate for a
+diversified conglomerate:**
+The v1 spec applied "Vietnam real estate developer" benchmarks to
+Vingroup (asset turnover 0.15–0.25×, collection period 60–120 days).
+Vingroup's FY2025 revenue reflects major contributions from VinFast
+(EV/auto), real estate, hospitality, and healthcare. Single-sector
+benchmarks would misrepresent Vingroup's efficiency ratios. I replaced
+§7 benchmarks with conglomerate-appropriate peers: Masan Group
+(Vietnam), CapitaLand (Singapore), and SM Group (Philippines).
+
+**Changes made in v2:**
+- §4: NOPAT corrected 34,392,803 → 34,392,603; arithmetic footnote added
+- §5: Added "Computed Value" column to all 25+ ratio rows; TIE
+  expanded with 0.124× value and critical flag
+- §3: Added `BAL_receivables_curr = 267,209,963` as standalone row
+- §6: Added V6 validation rule for TIE
+- §7: Benchmarks replaced with conglomerate peers
+- §9: Five mandatory recommendations (R1–R5) each cite a specific
+  ratio value, replacing generic framing in v1
+
+**AI output:** Revised spec saved at
+`docs/specs/2026-05-22-tran-vingroup-spec.md` (v2.0)
