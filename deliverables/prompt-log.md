@@ -140,3 +140,48 @@ benchmarks would misrepresent Vingroup's efficiency ratios. I replaced
 
 **AI output:** Revised spec saved at
 `docs/specs/2026-05-22-tran-vingroup-spec.md` (v2.0)
+
+## Stage 5 — LLM Analysis Execution & Evaluation
+
+**Date:** 2026-05-30
+**Tool:** Claude (claude.ai)
+
+**Prompt used:**
+I am executing Stage 5 of my BUS-629 project. The Stage 5
+requirements are at:
+https://github.com/adamwstauffer/shidler/blob/main/courses/BUS-629-VEMBA-International-Corporate-Finance/stage5-llm-analysis-evaluation.md
+
+Please read my Stage 4 spec at docs/specs/2026-05-22-tran-vingroup-spec.md
+and execute it as the sole input to produce the full ratio analysis
+for Vingroup FY2025. No additional context beyond the spec.
+
+**Context provided to AI:**
+- Spec v2.0: docs/specs/2026-05-22-tran-vingroup-spec.md (sole input)
+- Stage 3 workbook: models/builds/2026-05-22-tran-vingroup-financials.xlsx
+  (used for manual verification only, not fed to LLM)
+
+**AI output:** Raw analysis saved at
+`deliverables/2026-05-22-tran-vingroup-llm-raw.md`
+
+---
+
+## Stage 5 — Manual Verification & Final Analysis
+
+**Date:** 2026-05-30
+**Tool:** Claude (claude.ai) + manual arithmetic
+
+**Work done:**
+1. Verified 6 ratios by hand from Stage 3 financials vs. LLM output.
+   Found one interpretation divergence: Inventory Turnover 2.169x
+   (spec, start-of-year) vs. 1.568x (corrected, average method)
+   because inventory grew 77% YoY. All other values matched.
+2. Identified two LLM omissions: EBIT margin (1.09%) not reported;
+   Free Cash Flow (-7,302,290 VND millions) not computed.
+3. Added H1/H2/H3 hypothesis framing, FCF calculation, and EBIT
+   margin to final analysis. Corrected Inventory Turnover in ratio
+   table.
+
+**Outputs:**
+- `analysis/validation/2026-05-22-tran-vingroup-stage5-verification.md`
+- `deliverables/2026-05-22-tran-vingroup-final-analysis.md`
+- `deliverables/2026-05-22-tran-vingroup-spec-retrospective.md`
