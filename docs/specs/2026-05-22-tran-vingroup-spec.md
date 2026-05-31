@@ -5,14 +5,14 @@ audience: student
 fields_required: [title, author, date, version, company, scope, model_architecture, data_inputs, derived_inputs, formulas, validation, analysis_requirements, output_format, references]
 naming_convention: "YYYY-MM-DD-{slug}.md"
 courses: [BUS-629]
-notes: "Authored for BUS-629 VEMBA Stage 4. v2 — HIL-corrected. All figures in VND millions. Reporting standard: Vietnamese Accounting Standards (VAS). FY2025 current year, FY2024 prior year."
+notes: "Authored for BUS-629 VEMBA Stage 4. v3 — named-range notation completed for all 25+ ratios across all six categories; validation rules expanded to cover all six categories per instructor feedback 2026-05-30. All figures in VND millions. Reporting standard: Vietnamese Accounting Standards (VAS). FY2025 current year, FY2024 prior year."
 ---
 
 # Technical Specification: Vingroup Accounting & Performance Ratios Analysis
 
 **Author:** Tan Tran
 **Date:** 2026-05-22
-**Version:** 2.0 (HIL-corrected)
+**Version:** 3.0 (named-range notation completed; validation rules expanded)
 **Company:** Vingroup Joint Stock Company (VIC, HOSE)
 
 ---
@@ -179,42 +179,42 @@ All 25+ ratios organized by category. Named-range formulas stated precisely. **C
 
 | Ratio | Named Range | Formula | Unit | Computed Value | Interpretation Guide |
 |-------|------------|---------|------|----------------|----------------------|
-| Market Value Added (MVA) | — | `market_capitalization − currentYear_equity` | VND millions | 1,155,448,665 | Positive = market values firm above book |
-| Market-to-Book Ratio | — | `market_capitalization / currentYear_equity` | × | 8.63× | >1 = market premium to book |
-| Economic Value Added (EVA) | — | `currentYear_after_tax_operating_income − (cost_capital × startYear_total_capitalization)` | VND millions | +4,756 | Barely positive — value marginally created above 12% hurdle rate |
+| Market Value Added (MVA) | `RATIO_mva` | `market_capitalization − currentYear_equity` | VND millions | 1,155,448,665 | Positive = market values firm above book |
+| Market-to-Book Ratio | `RATIO_market_to_book` | `market_capitalization / currentYear_equity` | × | 8.63× | >1 = market premium to book |
+| Economic Value Added (EVA) | `RATIO_eva` | `currentYear_after_tax_operating_income − (cost_capital × startYear_total_capitalization)` | VND millions | +4,756 | Barely positive — value marginally created above 12% hurdle rate |
 
 #### Profitability Ratios
 
 | Ratio | Named Range | Formula | Unit | Computed Value | Interpretation Guide |
 |-------|------------|---------|------|----------------|----------------------|
-| ROA (start) | — | `currentYear_after_tax_operating_income / startYear_total_assets` | % | 4.11% | Prior-year asset base efficiency |
-| ROC (start) | — | `currentYear_after_tax_operating_income / startYear_total_capitalization` | % | 12.00% | Return on long-term capital |
-| ROE (start) | — | `INC_net / startYear_equity` | % | 7.19% | Net return to equity holders |
-| ROA (avg) | — | `currentYear_after_tax_operating_income / avg_total_assets` | % | 3.52% | Smoothed |
-| ROC (avg) | — | `currentYear_after_tax_operating_income / avg_total_capitalization` | % | 10.38% | Smoothed |
-| ROE (avg) | — | `INC_net / avg_equity` | % | 7.25% | Smoothed |
+| ROA (start) | `RATIO_roa_start` | `currentYear_after_tax_operating_income / startYear_total_assets` | % | 4.11% | Prior-year asset base efficiency |
+| ROC (start) | `RATIO_roc_start` | `currentYear_after_tax_operating_income / startYear_total_capitalization` | % | 12.00% | Return on long-term capital |
+| ROE (start) | `RATIO_roe_start` | `INC_net / startYear_equity` | % | 7.19% | Net return to equity holders |
+| ROA (avg) | `RATIO_roa_avg` | `currentYear_after_tax_operating_income / avg_total_assets` | % | 3.52% | Smoothed |
+| ROC (avg) | `RATIO_roc_avg` | `currentYear_after_tax_operating_income / avg_total_capitalization` | % | 10.38% | Smoothed |
+| ROE (avg) | `RATIO_roe_avg` | `INC_net / avg_equity` | % | 7.25% | Smoothed |
 
 #### Efficiency Ratios
 
 | Ratio | Named Range | Formula | Unit | Computed Value | Interpretation Guide |
 |-------|------------|---------|------|----------------|----------------------|
 | Asset Turnover | `RATIO_asset_turnover` | `INC_sales / startYear_total_assets` | × | 0.397× | Revenue per VND prior-year assets |
-| Receivables Turnover | — | `INC_sales / startYear_receivables` | × | 1.746× | Times receivables collected annually |
-| Avg Collection Period | — | `startYear_receivables / currentYear_daily_sales_average` | Days | 209 days | **Very long** — flag for analysis |
-| Inventory Turnover | — | `INC_cost_goods_sold / startYear_inventory` | × | 2.169× | Times inventory sold annually |
-| Days in Inventory | — | `startYear_inventory / currentYear_cost_goods_sold_daily` | Days | 168 days | Long cycle — real estate normal |
-| Profit Margin | — | `INC_net / INC_sales` | % | 3.33% | Net profit per VND revenue |
+| Receivables Turnover | `RATIO_receivables_turnover` | `INC_sales / startYear_receivables` | × | 1.746× | Times receivables collected annually |
+| Avg Collection Period | `RATIO_avg_collection_period` | `startYear_receivables / currentYear_daily_sales_average` | Days | 209 days | **Very long** — flag for analysis |
+| Inventory Turnover | `RATIO_inventory_turnover` | `INC_cost_goods_sold / startYear_inventory` | × | 2.169× | Times inventory sold annually |
+| Days in Inventory | `RATIO_days_in_inventory` | `startYear_inventory / currentYear_cost_goods_sold_daily` | Days | 168 days | Long cycle — real estate normal |
+| Profit Margin | `RATIO_profit_margin` | `INC_net / INC_sales` | % | 3.33% | Net profit per VND revenue |
 | Operating Profit Margin | `RATIO_operating_profit_margin` | `currentYear_after_tax_operating_income / INC_sales` | % | 10.36% | After-tax operating efficiency |
 
 #### Leverage Ratios
 
 | Ratio | Named Range | Formula | Unit | Computed Value | Interpretation Guide |
 |-------|------------|---------|------|----------------|----------------------|
-| LT Debt Ratio | — | `currentYear_debt_long_term / (currentYear_debt_long_term + currentYear_equity)` | % | 59.71% | LT debt share of long-term capital |
-| LT Debt-Equity Ratio | — | `currentYear_debt_long_term / currentYear_equity` | × | 1.482× | LT debt per VND equity |
-| Total Debt Ratio | — | `currentYear_liabilities_total / currentYear_assets_total` | % | 86.46% | Share of assets financed by liabilities |
-| **Times Interest Earned (TIE)** | — | `INC_ebit / INC_interest_expense` | × | **0.124×** | **⚠ CRITICAL: EBIT covers only 12.4% of interest expense. Sub-1× means operating profit alone cannot service debt. Vingroup survives due to INC_other_income (VND 51,968,218M). Stage 5 must explain this explicitly.** |
-| Cash Coverage | — | `(INC_ebit + INC_depreciation) / INC_interest_expense` | × | 1.210× | Adds back depreciation — marginally above 1× |
+| LT Debt Ratio | `RATIO_lt_debt_ratio` | `currentYear_debt_long_term / (currentYear_debt_long_term + currentYear_equity)` | % | 59.71% | LT debt share of long-term capital |
+| LT Debt-Equity Ratio | `RATIO_lt_debt_equity` | `currentYear_debt_long_term / currentYear_equity` | × | 1.482× | LT debt per VND equity |
+| Total Debt Ratio | `RATIO_total_debt_ratio` | `currentYear_liabilities_total / currentYear_assets_total` | % | 86.46% | Share of assets financed by liabilities |
+| **Times Interest Earned (TIE)** | `RATIO_tie` | `INC_ebit / INC_interest_expense` | × | **0.124×** | **⚠ CRITICAL: EBIT covers only 12.4% of interest expense. Sub-1× means operating profit alone cannot service debt. Vingroup survives due to INC_other_income (VND 51,968,218M). Stage 5 must explain this explicitly.** |
+| Cash Coverage | `RATIO_cash_coverage` | `(INC_ebit + INC_depreciation) / INC_interest_expense` | × | 1.210× | Adds back depreciation — marginally above 1× |
 | Debt Burden | `RATIO_debt_burden` | `INC_net / currentYear_after_tax_operating_income` | × | 0.322× | 32.2% of operating profit reaches equity holders |
 | Leverage Ratio | `RATIO_leverage` | `currentYear_assets_total / currentYear_equity` | × | 7.384× | Equity multiplier; primary ROE driver |
 
@@ -222,10 +222,10 @@ All 25+ ratios organized by category. Named-range formulas stated precisely. **C
 
 | Ratio | Named Range | Formula | Unit | Computed Value | Interpretation Guide |
 |-------|------------|---------|------|----------------|----------------------|
-| NWC to Assets | — | `currentYear_working_capital_net / currentYear_assets_total` | % | 6.38% | Thin positive buffer |
-| Current Ratio | — | `currentYear_assets_current / currentYear_liabilities_current` | × | 1.121× | Near minimum acceptable level |
-| Quick Ratio | — | `(currentYear_cash_marketable_securities + BAL_receivables_curr) / currentYear_liabilities_current` | × | 0.597× | **Below 1× — liquid assets cannot cover current liabilities** |
-| Cash Ratio | — | `currentYear_cash_marketable_securities / currentYear_liabilities_current` | × | 0.142× | Cash covers only 14.2% of current liabilities |
+| NWC to Assets | `RATIO_nwc_to_assets` | `currentYear_working_capital_net / currentYear_assets_total` | % | 6.38% | Thin positive buffer |
+| Current Ratio | `RATIO_current_ratio` | `currentYear_assets_current / currentYear_liabilities_current` | × | 1.121× | Near minimum acceptable level |
+| Quick Ratio | `RATIO_quick_ratio` | `(currentYear_cash_marketable_securities + BAL_receivables_curr) / currentYear_liabilities_current` | × | 0.597× | **Below 1× — liquid assets cannot cover current liabilities** |
+| Cash Ratio | `RATIO_cash_ratio` | `currentYear_cash_marketable_securities / currentYear_liabilities_current` | × | 0.142× | Cash covers only 14.2% of current liabilities |
 
 > **Quick Ratio note:** Formula uses `BAL_receivables_curr = 267,209,963` (FY2025 current-year figure) explicitly — not the prior-year alias `startYear_receivables`.
 
@@ -233,33 +233,104 @@ All 25+ ratios organized by category. Named-range formulas stated precisely. **C
 
 | Ratio | Named Range | Formula | Unit | Computed Value | Note |
 |-------|------------|---------|------|----------------|------|
-| ROA (Du Pont) | — | `RATIO_asset_turnover × RATIO_operating_profit_margin` | % | 4.11% | ✓ Must match ROA (start) exactly |
-| ROE (Du Pont) | — | `RATIO_leverage × RATIO_asset_turnover × RATIO_operating_profit_margin × RATIO_debt_burden` | % | 9.77% | Will **not** match ROE (start) = 7.19% — see V2 |
+| ROA (Du Pont) | `RATIO_roa_dupont` | `RATIO_asset_turnover × RATIO_operating_profit_margin` | % | 4.11% | ✓ Must match ROA (start) exactly |
+| ROE (Du Pont) | `RATIO_roe_dupont` | `RATIO_leverage × RATIO_asset_turnover × RATIO_operating_profit_margin × RATIO_debt_burden` | % | 9.77% | Will **not** match ROE (start) = 7.19% — see V2 |
 
 ---
 
 ### 6. Validation Rules
 
-The executor must verify all five checks before proceeding to analysis.
+The executor must verify all checks below before proceeding to analysis. Checks are organized by the same six categories as §5 to ensure complete coverage.
 
-**V1 — Du Pont ROA (must match exactly):**
+---
+
+**PERFORMANCE CHECKS**
+
+**VP1 — EVA sign consistency:**
+`RATIO_eva = currentYear_after_tax_operating_income − (cost_capital × startYear_total_capitalization)`
+= 34,392,603 − (0.12 × 286,565,393) = 34,392,603 − 34,387,847 = **+4,756** VND millions.
+Must be positive (barely). If negative, check NOPAT formula or WACC input.
+
+**VP2 — Market-to-Book sanity:**
+`RATIO_market_to_book = market_capitalization / currentYear_equity`
+= 1,306,937,600 / 151,488,935 = **8.63×**.
+Must be >1 (Vingroup trades at a premium to book). If <1, recheck `share_price` or `shares_outstanding`.
+
+---
+
+**PROFITABILITY CHECKS**
+
+**VPR1 — ROA (start) cross-check:**
+`RATIO_roa_start = currentYear_after_tax_operating_income / startYear_total_assets`
+= 34,392,603 / 836,603,903 = **4.11%**.
+Must match Du Pont ROA exactly (see V1 below). Any discrepancy = formula error; stop and investigate.
+
+**VPR2 — ROC vs. WACC:**
+`RATIO_roc_start = 12.00%` must equal `cost_capital = 12.0%` within ±0.05%. This confirms near-zero EVA (+4,756) is arithmetically consistent with ROC barely clearing WACC. If ROC deviates materially, check `startYear_total_capitalization` derivation.
+
+---
+
+**EFFICIENCY CHECKS**
+
+**VE1 — ACP × daily sales = prior receivables:**
+`RATIO_avg_collection_period × currentYear_daily_sales_average`
+= 209 × 909,144 = **190,011,096 ≈ startYear_receivables (190,046,565)**. ✓ Minor rounding acceptable (within 0.02%).
+
+**VE2 — Days in Inventory × daily COGS = prior inventory:**
+`RATIO_days_in_inventory × currentYear_cost_goods_sold_daily`
+= 168 × 678,053 = **113,912,904 ≈ startYear_inventory (114,090,183)**. ✓ Minor rounding acceptable (within 0.16%).
+
+---
+
+**LEVERAGE CHECKS**
+
+**V1 (formerly VL1) — Du Pont ROA (must match exactly):**
 `RATIO_asset_turnover × RATIO_operating_profit_margin = 0.3966 × 0.1036 = 4.11%`
-Must equal `currentYear_after_tax_operating_income / startYear_total_assets = 34,392,603 / 836,603,903 = 4.11%`. ✓ Confirmed. Any discrepancy = formula error; stop and investigate.
+Must equal `RATIO_roa_start = 34,392,603 / 836,603,903 = 4.11%`. ✓ Confirmed. Any discrepancy = formula error; stop and investigate.
 
-**V2 — Du Pont ROE time-mismatch (expected divergence — explain, do not fix):**
-Du Pont ROE = 9.77% vs. direct ROE (start) = 7.19%. Divergence of 2.57% is expected and arises because `RATIO_leverage` uses current-year assets (1,118,622,625) while `RATIO_asset_turnover` uses prior-year assets (836,603,903). This is a known model design feature. Stage 5 must acknowledge and explain this explicitly.
+**VL2 — TIE critical flag (sub-1× expected — must be flagged, not corrected):**
+`RATIO_tie = INC_ebit / INC_interest_expense = 3,628,893 / 29,159,736 = 0.124×`.
+This is below 1.0×. The spec requires Stage 5 to identify `INC_other_income` (51,968,218) as the bridging item enabling net profitability despite sub-1× TIE, and to assess whether this other income is recurring.
 
-**V3 — Balance Sheet balance:**
-`BAL_assets_total_curr` (1,118,622,625) = `BAL_liabilities_total_curr + BAL_equity_shareholders_curr` (967,133,690 + 151,488,935 = 1,118,622,625). ✓ Confirmed.
+**VL3 — Total Debt Ratio complement:**
+`RATIO_total_debt_ratio + (currentYear_equity / currentYear_assets_total)`
+= 86.46% + (151,488,935 / 1,118,622,625) = 86.46% + 13.54% = **100.00%**. ✓ Must sum to 100%.
 
-**V4 — Net Income reconciliation:**
+---
+
+**LIQUIDITY CHECKS**
+
+**VLQ1 — NWC consistency:**
+`currentYear_working_capital_net = currentYear_assets_current − currentYear_liabilities_current`
+= 658,772,464 − 587,454,564 = **71,317,900**.
+`RATIO_nwc_to_assets = 71,317,900 / 1,118,622,625 = 6.38%`. ✓ Confirmed.
+
+**VLQ2 — Quick Ratio uses current-year receivables (not prior-year alias):**
+`RATIO_quick_ratio` numerator = `currentYear_cash_marketable_securities + BAL_receivables_curr`
+= 83,380,686 + 267,209,963 = **350,590,649**.
+`RATIO_quick_ratio = 350,590,649 / 587,454,564 = 0.597×`. ✓ Confirmed.
+**Do NOT substitute `startYear_receivables` (190,046,565) here** — that would give 0.466×, which is incorrect.
+
+---
+
+**DU PONT CHECKS**
+
+**V2 (formerly VDP1) — Du Pont ROE time-mismatch (expected divergence — explain, do not fix):**
+`RATIO_roe_dupont = RATIO_leverage × RATIO_asset_turnover × RATIO_operating_profit_margin × RATIO_debt_burden`
+= 7.384 × 0.397 × 0.1036 × 0.322 = **9.77%** vs. `RATIO_roe_start = 7.19%`.
+Divergence of 2.57% is expected and arises because `RATIO_leverage` uses current-year assets (1,118,622,625) while `RATIO_asset_turnover` uses prior-year assets (836,603,903). This is a known model design feature. Stage 5 must acknowledge and explain this explicitly.
+
+**VDP2 — Balance Sheet balance (prerequisite for all ratios):**
+`BAL_assets_total_curr` (1,118,622,625) = `BAL_liabilities_total_curr + BAL_equity_shareholders_curr`
+(967,133,690 + 151,488,935 = 1,118,622,625). ✓ Confirmed.
+
+**VDP3 — Net Income reconciliation (prerequisite for all profitability ratios):**
 `INC_taxable_income − INC_taxes = 26,437,375 − 15,372,561 = 11,064,814 = INC_net`. ✓ Confirmed.
 
-**V5 — NOPAT formula:**
-`INC_net + (1 − tax_rate) × INC_interest_expense = 11,064,814 + 0.80 × 29,159,736 = 34,392,603`. ✓ Confirmed.
-
-**V6 — TIE critical flag:**
-`INC_ebit / INC_interest_expense = 3,628,893 / 29,159,736 = 0.124×`. This is below 1.0×. The spec requires the Stage 5 analysis to identify `INC_other_income` (51,968,218) as the bridging item that enables net profitability despite sub-1× TIE, and to assess whether this other income is recurring.
+**VDP4 — NOPAT formula:**
+`currentYear_after_tax_operating_income = INC_net + (1 − tax_rate) × INC_interest_expense`
+= 11,064,814 + 0.80 × 29,159,736 = **34,392,603**. ✓ Confirmed.
+*(v1 had a typo of 34,392,803 — corrected in v2.)*
 
 ---
 
