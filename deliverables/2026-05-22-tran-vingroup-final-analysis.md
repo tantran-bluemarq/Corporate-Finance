@@ -39,7 +39,7 @@ Vingroup (VIC, HOSE) is Vietnam's largest conglomerate: real estate (Vinhomes), 
 | Current Ratio | `BAL_assets_current_curr / BAL_liabilities_current_curr` | **1.121×** | N/A | Below comfort |
 | Quick Ratio | `(BAL_cash + BAL_receivables_curr) / BAL_liabilities_current_curr` | **0.597×** | N/A | ⚠ Below 1× |
 
-**Verdict:** Hypothesis fully confirmed. Long-term debt grew 69% in one year, from VND 132.7T to VND 224.5T, as VinFast drew capital for factory expansion. Total debt now funds 86.46% of all assets. TIE of 0.124× is the most critical signal: EBIT covers only 12.4% of annual interest expense. The gap is bridged by VND 52T of Other Income. If that income shrinks, Vingroup cannot service debt from operations alone. Current ratio of 1.121× and quick ratio of 0.597× confirm liquidity has deteriorated exactly as hypothesised.
+**Verdict:** Confirmed. Long-term debt grew 69% YoY (VND 132.7T → 224.5T) as VinFast drew capital for factory expansion. Total debt now funds 86.46% of all assets. TIE of 0.124× is the critical signal: EBIT covers only 12.4% of annual interest expense, with the gap bridged by VND 52T of Other Income. If that income shrinks, Vingroup cannot service debt from operations alone. Current ratio 1.121× and quick ratio 0.597× confirm liquidity has deteriorated exactly as hypothesised.
 
 ---
 
@@ -55,7 +55,7 @@ Vingroup (VIC, HOSE) is Vietnam's largest conglomerate: real estate (Vinhomes), 
 | Avg Collection Period | `startYear_receivables / (INC_sales / 365)` | **209 days** | N/A | Very long |
 | CFO / Net Income | `CASH_operating / INC_net` | **6.22×** | N/A | CFO far exceeds net income |
 
-**Verdict:** Partially confirmed. The deposit/unearned revenue proxy (Other Current Liabilities) grew 13.9%: meaningful in absolute terms (VND +50.6T) but slower than revenue growth of 75.5%, suggesting pre-sales acceleration was real but not the dominant driver. The stronger signal is **CFO of VND 68.9T vs. Net Income of VND 11.1T (6.22× ratio)**: cash collected significantly exceeds reported earnings, consistent with deposits being received before revenue is recognised. ACP of 209 days (nearly 7 months) confirms a large wedge between cash collection timing and revenue recognition across the business.
+**Verdict:** Partially confirmed. The deposit proxy (Other Current Liabilities) grew 13.9% — meaningful in absolute terms (VND +50.6T) but slower than revenue growth of 75.5%, suggesting pre-sales acceleration was real but not the dominant driver. The stronger signal is CFO of VND 68.9T vs. Net Income of VND 11.1T (6.22×): cash collected significantly exceeds reported earnings, consistent with deposits received before revenue is recognised. ACP of 209 days confirms a large wedge between cash collection and revenue recognition across the business.
 
 ---
 
@@ -73,7 +73,7 @@ Vingroup (VIC, HOSE) is Vietnam's largest conglomerate: real estate (Vinhomes), 
 | CFF covers FCF shortfall? | N/A | Yes: CFF is 14× the FCF gap |
 | Net cash change | N/A | +30,935,609 |
 
-**Verdict:** Fully confirmed. Capex of VND 76.2T exceeded CFO of VND 68.9T by 10.6%, producing **negative FCF of VND -7.3T**. The entire gap , and more, was funded by CFF of VND +102T from new debt issuances and equity raises. This confirms Vingroup is in a phase where operations cannot self fund growth and the company depends on continued capital market access to stay solvent. If credit markets tighten, this funding model breaks.
+**Verdict:** Confirmed. Capex of VND 76.2T exceeded CFO of VND 68.9T by 10.6%, producing **negative FCF of VND -7.3T**. The entire gap — and more — was funded by CFF of VND +102T from new debt and equity raises. Vingroup is in a phase where operations cannot self-fund growth and the company depends on continued capital market access. If credit markets tighten, this funding model breaks.
 
 ---
 
@@ -164,7 +164,7 @@ Leverage (7.384×) is doing almost all the work. At conservative leverage of 3×
 
 ---
 
-## 5. Strategic Recommendations
+## Strategic Recommendations
 
 ### R1: Refinance short-term debt before it matures (H1: TIE = 0.124×)
 VND 114T short-term debt is due soon. EBIT covers only 12.4% of interest. **Action:** Refinance at least VND 57T into 3–5 year bonds matched to Vinhomes handover cash flows.
