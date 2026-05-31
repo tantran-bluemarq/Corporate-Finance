@@ -208,3 +208,24 @@ Please revise the spec to fully address the instructor feedback:
 - Accepted all named-range assignments as proposed by Claude
 - Accepted expanded validation rules (12 checks across 6 categories) as proposed
 - Committed directly to main branch via GitHub web editor
+
+## Stage 5 — Revision (Response to Instructor Feedback)
+
+**Date:** 2026-05-31
+**Tool:** Claude (claude.ai)
+
+**Prompt used:**
+Here are the Stage 5 deliverables and instructor feedback. Feedback identified three
+issues: (1) Strategic Recommendations detected as 0 — section heading not recognised
+by rubric script; (2) Three Revisions not detected in spec retrospective — heading
+format not recognised; (3) Final analysis length 1,906 words exceeds 1,800-word target.
+
+Please revise both files to address the instructor feedback:
+- Fix final analysis: rename heading to bare "Strategic Recommendations"; trim ~110
+  words from verdict paragraphs to bring within 1,800-word limit
+- Fix spec retrospective: rename heading to "Three Revisions" for script detection
+
+**HIL decisions made:**
+- Accepted heading fixes as proposed by Claude
+- Accepted word-count trims — content preserved, only redundant phrasing removed
+- Committed both files directly to main branch via GitHub web editor
