@@ -185,3 +185,26 @@ for Vingroup FY2025. No additional context beyond the spec.
 - `analysis/validation/2026-05-22-tran-vingroup-stage5-verification.md`
 - `deliverables/2026-05-22-tran-vingroup-final-analysis.md`
 - `deliverables/2026-05-22-tran-vingroup-spec-retrospective.md`
+
+## Stage 4 — Revision (Response to Instructor Feedback)
+
+**Date:** 2026-05-31
+**Tool:** Claude (claude.ai)
+
+**Prompt used:**
+Here is the tech spec submitted along with instructor feedback from the Stage 4 review.
+Instructor feedback identified two issues: (1) Section 6 covers fewer ratio categories
+than expected — only profitability, leverage, du pont detected (3/6); the full template
+requires all six categories with named-range notation so the Stage 5 LLM can execute
+without guessing. (2) Many ratios in Section 5 had no named range assigned (shown as —).
+
+Please revise the spec to fully address the instructor feedback:
+- Assign named-range identifiers (RATIO_*) to all 25+ ratios across all six categories
+- Expand Section 6 Validation Rules to cover all six categories: Performance,
+  Profitability, Efficiency, Leverage, Liquidity, Du Pont
+
+**HIL decisions made:**
+- Confirmed spec file path: docs/specs/2026-05-22-tran-vingroup-spec.md
+- Accepted all named-range assignments as proposed by Claude
+- Accepted expanded validation rules (12 checks across 6 categories) as proposed
+- Committed directly to main branch via GitHub web editor
