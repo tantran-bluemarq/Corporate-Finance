@@ -70,7 +70,7 @@ stage5_output: deliverables/2026-05-22-tran-vingroup-llm-raw.md
 
 ---
 
-## 3. Revisions
+## Three Revisions
 
 1. Add EBIT Margin row to section 5 Profitability with a note distinguishing it from NOPAT Margin. Addresses Gap 1.
 2. Add an averaging warning to Inventory Turnover in section 5 requiring both results when YoY growth exceeds 20%. Addresses Gap 2.
@@ -78,7 +78,7 @@ stage5_output: deliverables/2026-05-22-tran-vingroup-llm-raw.md
 
 ---
 
-## 4. Effectiveness Rating
+## 3. Effectiveness Rating
 
 **My rating: 4**
 
@@ -86,13 +86,13 @@ The spec did its core job well: all 25+ ratios were correct, Du Pont was exact, 
 
 ---
 
-## 5. Forward Link
+## 4. Forward Link
 
 Next time I write a spec, I will map each section to at least one hypothesis before writing any ratio definitions, so that every hypothesis has a corresponding named-range formula and every formula has a clear analytical purpose.
 
 ---
 
-## 6. Retrospective Process Feedback
+## 5. Retrospective Process Feedback
 
 The section-by-section verdict table was the most useful part. It forced a specific symptom for each verdict, which prevented vague self-assessment. Without it I would have rated the spec a 4 and not identified the EBIT margin gap specifically.
 
